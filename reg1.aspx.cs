@@ -17,7 +17,7 @@ namespace WebApplication1
 
         void obr()
         {
-            Response.Write("kkkkkk"); 
+         
         }
     }
    

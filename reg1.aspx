@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="reg.aspx.cs" Inherits="WebApplication1.reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="req.cshtml" Inherits="WebApplication1.reg" %>
 
 <!DOCTYPE html>
 
@@ -141,7 +141,7 @@
 
 <body>
 <h2> Регистрация на мероприятия проекта "Чай со смыслом  </h2>
-<form action="/reg.aspx.cs" method="post" name="req" enctype="multipart/form-data">
+<form action="/req.cshtml" method="post" name="req" enctype="multipart/form-data">
   <ul class="wrapper">
 
 
@@ -169,12 +169,28 @@
 
       <li class="form-row">
 
-        <label>Телефонный номер,ссылка на ВК (ТГ)  </label>
+        <label>Телефонный номер  </label>
         <input name="tnumb" value="<%= ((string)Context.Items["tnumb"]) %>" />
+
     </li>
+
+     
 
       <li class="form-row">
 
+        <label> ссылка на ВК (ТГ)  </label>
+        <input name="tnumb" value="<%= ((string)Context.Items["tnumb"]) %>" />
+
+    </li>
+
+      <li class="form-row">
+          <select name="city" id="city-select">
+    <option value="">-- Выберите город --</option>
+    <option value="petersburg">Санкт-Петербург</option>
+    <option value="samara">Самара</option>
+    <option value="perm">Пермь</option>
+    <option value="novosibirsk">Новосибирск</option>
+  </select>
         <label> Встреча </label>
         <input name="urtver" value="<%= ((string)Context.Items["urtver"]) %>" />
      
