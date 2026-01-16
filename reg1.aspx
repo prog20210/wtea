@@ -147,9 +147,6 @@
 
   
 
-<li class="form-row">
- 
-    </li>
      <li class="form-row">
         <label>Фамилия </label>
         <input name="lastName" value="<%= ((string)Context.Items["lastname"]) %>" />
@@ -179,22 +176,30 @@
       <li class="form-row">
 
         <label> ссылка на ВК (ТГ)  </label>
-        <input name="tnumb" value="<%= ((string)Context.Items["tnumb"]) %>" />
+        <input name="link" value="<%= ((string)Context.Items["tnumb"]) %>" />
 
     </li>
+           <li class="form-row">
+         <label> Тип встречи </label>
 
-      <li class="form-row">
-          <select name="city" id="city-select">
-    <option value="">-- Выберите город --</option>
-    <option value="petersburg">Санкт-Петербург</option>
-    <option value="samara">Самара</option>
-    <option value="perm">Пермь</option>
-    <option value="novosibirsk">Новосибирск</option>
-  </select>
-        <label> Встреча </label>
-        <input name="urtver" value="<%= ((string)Context.Items["urtver"]) %>" />
+          <select name="typvstr" id="typvs">
+    <option value="wtea"> Чай со смыслом  </option>
+    <option value="bclub">Книжный клуб </option>
+                </select>
+    </li>
+  
+
+      
+         </p>
+       <li class="form-row">
+       <p align="left">
+                 <select name="theme" id="typvs">
+    <option value="wtea"> тема   </option>
+       </p>
      
+
     </li>
+    
   <li class="form-row">
 
  <label>  Ваши предложения и пожелания проекту   </label>
