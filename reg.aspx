@@ -141,7 +141,7 @@
 
 <body>
 <h2> Регистрация на мероприятия проекта "Чай со смыслом  </h2>
-<form action="/req1" method="post" name="req" enctype="multipart/form-data">
+<form action="/reg.aspx.cs" method="post" name="req" enctype="multipart/form-data">
   <ul class="wrapper">
 
 
