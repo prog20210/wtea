@@ -7,24 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class reg : System.Web.UI.Page
+    public partial class rewiew : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            obr();
 
         }
-
         void obr()
         {
-         
-        }
-        void changeview()
-        {
-            //beg = Request.Form["beg"].Trim().ToString();
-            //end = Request.Form["end"].Trim().ToString();
-        }
 
+        }
     }
-   
 }

@@ -124,23 +124,22 @@
             color: #ff0000;
         }
 
+ .select 
+ {
+     align-items:normal
+      
+ }
 
+ 
 </style>
 
-            
 
-
-
-
-
-
-
+           
 </head>
               
 
-
 <body>
-<h2> Регистрация на мероприятия проекта "Чай со смыслом  </h2>
+<h2> Регистрация на мероприятия проекта "Чай со смыслом"  </h2>
 <form action="/req.cshtml" method="post" name="req" enctype="multipart/form-data">
   <ul class="wrapper">
 
@@ -148,9 +147,15 @@
   
 
      <li class="form-row">
+
+          <label> Email </label>
+        <input type="email"  name="email" value="" <%= ((string)Context.Items["email"]) %>" onchange="email_TextChanged()" />
+              </li>
+          <li class="form-row">
         <label>Фамилия </label>
         <input name="lastName" value="<%= ((string)Context.Items["lastname"]) %>" />
         </li>
+
           <li class="form-row">
 
         <label>Имя</label>
@@ -171,40 +176,67 @@
 
     </li>
 
-     
+        <li class="form-row">
 
-      <li class="form-row">
-
-        <label> ссылка на ВК (ТГ)  </label>
+        <label> ссылка на ВК (ТГ). </label>
         <input name="link" value="<%= ((string)Context.Items["tnumb"]) %>" />
 
-    </li>
-           <li class="form-row">
-         <label> Тип встречи </label>
 
-          <select name="typvstr" id="typvs">
+    </li>
+
+           <li class="form-row" style="">
+         <label> Тип встречи </label>
+            
+               <select name="typvstr"style="width:1030px; height:50px; class="ts" id="typvstr">
     <option value="wtea"> Чай со смыслом  </option>
     <option value="bclub">Книжный клуб </option>
                 </select>
+  </p>
+     <li class="form-row" style="">
+         <label> Дата  </label>
+     <li class="form-row" style="">  C </p> <input type="date" name="beg"  style="width:30px" required > 
+          <li class="form-row" style="">  
+         По <input type="date" name="end"  required > </li>
+<p>
+ 
+
+
+
+
+     <li class="form-row" style="">
+         <label> Тема  </label>
+   <select name="theme" style="width:1030px; class="ts" id="theme" >
+    <option value="wtea"> Терпение   </option>
+    <option value="bclub">Смирение  </option>
+    <option value="bclub">Евхаристия</option>
+                </select>   
+ </p>
+    
+      
+   
+      <li class="form-row">
+
+        <label> Ваши предложения и пожелания проекту   </label>
+        <input name="link" value=""/>
+
+
+    </li>    
+
+
+   
+
     </li>
-  
+ </p>
 
       
-         </p>
-       <li class="form-row">
-       <p align="left">
-                 <select name="theme" id="typvs">
-    <option value="wtea"> тема   </option>
-       </p>
+    
      
 
     </li>
     
   <li class="form-row">
 
- <label>  Ваши предложения и пожелания проекту   </label>
-        <input name="urtver" value="<%= ((string)Context.Items["urtver"]) %>" />
-     
+      
     </li>
       
 
