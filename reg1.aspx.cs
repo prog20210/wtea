@@ -11,13 +11,12 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            obr();
-
+            obr1();
         }
 
-        void obr()
+        void obr1()
         {
-         
+
         }
         void changeview()
         {

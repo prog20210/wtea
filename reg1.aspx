@@ -187,41 +187,56 @@
            <li class="form-row" style="">
          <label> Тип встречи </label>
             
-               <select name="typvstr"style="width:1030px; height:50px; class="ts" id="typvstr">
+               <select name="typvstr"style="width:1015px; height:50px; class="ts" id="typvstr">
     <option value="wtea"> Чай со смыслом  </option>
     <option value="bclub">Книжный клуб </option>
                 </select>
-  </p>
-     <li class="form-row" style="">
-         <label> Дата  </label>
-     <li class="form-row" style="">  C </p> <input type="date" name="beg"  style="width:30px" required > 
-          <li class="form-row" style="">  
-         По <input type="date" name="end"  required > </li>
-<p>
+  
+
+
+
+
+
+
+  
+ </p>
+    
+   <li class="form-row">
+
+        <label> Дата  </label>
  
+<li class="form-row">
+
+        <label> C </label>
+        <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>
+
+<li class="form-row">
+
+        <label> По </label>
+        <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>
 
 
+    </li>
 
 
-     <li class="form-row" style="">
+    </li>
+ 
+  <li class="form-row" style="">
          <label> Тема  </label>
-   <select name="theme" style="width:1030px; class="ts" id="theme" >
+   <select name="theme" style="width:1015px; class="ts" id="theme" >
     <option value="wtea"> Терпение   </option>
     <option value="bclub">Смирение  </option>
     <option value="bclub">Евхаристия</option>
                 </select>   
- </p>
-    
-      
-   
+
       <li class="form-row">
 
         <label> Ваши предложения и пожелания проекту   </label>
-        <input name="link" value=""/>
+        <input name="feedback" value=""/>
 
 
     </li>    
-
+   
 
    
 
