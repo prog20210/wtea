@@ -147,6 +147,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="fedbobr.cshtml" />
+    <Content Include="feed.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="reg1.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -247,6 +248,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="feed.aspx.cs">
+      <DependentUpon>feed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feed.aspx.designer.cs">
+      <DependentUpon>feed.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
