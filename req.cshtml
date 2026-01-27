@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Npgsql; 
+
+@{
     string email ="";
     string typvstr = "";
     string mit = "";
@@ -13,7 +15,7 @@
     DateTime datbeg;
     DateTime datend;
 
-
+    //
 
 
 
@@ -31,7 +33,7 @@
         typvstr=Request.Form["theme"].Trim();
         fb=Request.Form["feedback"].Trim();
 
-            
+          NpgsqlConnectionStringBuilder conn=
         
     }
 
@@ -50,8 +52,8 @@
         Благодарим за регистрацию. В ближайшее время к Вам поступит письмо (сообщение) с информацией о дате и месте встречи.
         <p> </p>
         <p>
-            Просим оставить свои впечатления о встрече, пожелания и предложения, по ссылке <a href="https://localhost:44374/feedback"> Отзыв   </a>
-
+            Просим оставить свои впечатления о встрече, пожелания и предложения, по ссылке <a href="~/feed.aspx"> Отзыв   </a>
+            
             Это очень важно для нас
         </p>
         <p align="center"> С любовью во Христе, команда проекта "Чай со смыслом"</p>

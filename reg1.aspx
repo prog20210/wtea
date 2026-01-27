@@ -203,7 +203,7 @@
     
    <li class="form-row">
 
-        <label> Дата  </label>
+        <label> Дата встречи  </label>
  
 <li class="form-row">
 
@@ -216,10 +216,10 @@
         <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>
 
 
-    </li>
 
 
-    </li>
+
+   
  
   <li class="form-row" style="">
          <label> Тема  </label>
@@ -228,14 +228,16 @@
     <option value="bclub">Смирение  </option>
     <option value="bclub">Евхаристия</option>
                 </select>   
-
+ </li>
       <li class="form-row">
-
+       <label> Откуда узнали о нас и наших встречах ?   </label>
+   <input name="source" value=""/>
+                <li class="form-row">
         <label> Ваши предложения и пожелания проекту   </label>
         <input name="feedback" value=""/>
+ </li>
 
 
-    </li>    
    
 
    
