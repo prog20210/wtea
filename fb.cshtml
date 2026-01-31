@@ -38,12 +38,9 @@
         NpgsqlConnection con = new NpgsqlConnection();
         ConnectionStringSettings constr;
         constr = ConfigurationManager.ConnectionStrings["con"];
-        con.ConnectionString = constr.ToString();
         try
         {
             con.Open();
-            NpgsqlCommand com = new NpgsqlCommand();
-            com.CommandText = "";
         }
         catch
         {

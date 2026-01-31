@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="feed.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="~/fb.cshtml"  Inherits="WebApplication1.WebForm1" %>
  <style>
 .wrapper {
   background-color: whitesmoke;
@@ -137,9 +137,14 @@
       </li>         
  <li class="form-row" >   
      <label>Введите ваш отзыв: </label>
-  <textarea name="comment"></textarea>
+  <textarea name="comment" style="width:1030px; height=300px"></textarea>
      </li>
+        <p align="center">
+<input type="submit" class="butt" name="submit" value="Отправить запрос" /></p>
 
+<p align="center">
+
+<input type="button" class="butt" name="back" value="На главную " onclick="document.location = 'Default.aspx'" />
     </form>
 </body>
 </html>

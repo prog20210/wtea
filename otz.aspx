@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="req.cshtml" Inherits="WebApplication1.reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="otz.aspx.cs" Inherits="WebApplication1.reg" %>
 
 <!DOCTYPE html>
 
@@ -148,14 +148,18 @@
 
      <li class="form-row">
 
-
+          <label> Email </label>
+        <input type="email"  name="email" value="" <%= ((string)Context.Items["email"]) %>" onchange="email_TextChanged()" />
+              </li>
+ 
           <li class="form-row">
 
         <label>Имя</label>
         <input name="firstName" value="<%= ((string)Context.Items["firstname"]) %>" />
     </li>
+      
+      <li class="form-row">
 
-  
 
       <li class="form-row">
 
@@ -191,14 +195,35 @@
     
    <li class="form-row">
 
-
-
         <label> Дата встречи  </label>
-        <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>   
+ 
+<li class="form-row">
+
+        <label> C </label>
+        <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>
+
+<li class="form-row">
+
+        <label> По </label>
+        <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>
+
+
+
+
+
+   
+ 
+  <li class="form-row" style="">
+         <label> Тема  </label>
+   <select name="theme" style="width:1030px; class="ts" id="theme" >
+    <option value="wtea"> Терпение   </option>
+    <option value="bclub">Смирение  </option>
+    <option value="bclub">Евхаристия</option>
+                </select>   
+ </li>
       <li class="form-row">
        <label> Откуда узнали о нас и наших встречах ?   </label>
    <input name="source" value=""/>
-
                 <li class="form-row">
         <label> Ваши предложения и пожелания проекту   </label>
         <input name="feedback" value=""/>
@@ -207,7 +232,9 @@
 
    
 
- 
+   
+
+    </li>
  </p>
 
       

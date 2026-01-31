@@ -1,8 +1,10 @@
-﻿@using Npgsql;
+﻿﻿@using Npgsql;
 @using System.Management.Automation;
 @using System.Configuration
 
 @{
+
+
     string email = "";
     string typvstr = "";
     string mit = "";
@@ -12,12 +14,8 @@
     string theme = "";
     string beg;
     string end;
-    string tnumb;
-    string fb;
-    DateTime datbeg;
-    DateTime datend;
 
-    //
+
 
 
 
@@ -26,32 +24,17 @@
     {
         Layout = null;
         email = Request.Form["lastName"].Trim();
-        tnumb = Request.Form["lastName"].Trim();
         typvstr = Request.Form["typvstr"].Trim();
         //string city = Request.Form["city"].Trim();
         lastname = Request.Form["lastName"].Trim();
         firstname = Request.Form["firstName"].Trim();
         linkvktg = Request.Form["link"].Trim();
         typvstr = Request.Form["theme"].Trim();
-        fb = Request.Form["feedback"].Trim();
-
-        NpgsqlConnection con = new NpgsqlConnection();
-        ConnectionStringSettings constr;
-        constr = ConfigurationManager.ConnectionStrings["con"];
-        con.ConnectionString = constr.ToString();
-        try
-        {
-            con.Open();
-            NpgsqlCommand com = new NpgsqlCommand();
-            com.CommandText = "";
-        }
-        catch
-        {
-
-        }
 
     }
-
+    NpgsqlConnection con = new NpgsqlConnection();
+    ConnectionStringSettings constr;
+    constr = ConfigurationManager.ConnectionStrings["con"];
 
 }
 
@@ -64,13 +47,9 @@
 </head>
 <body>
     <div>
-        Благодарим за регистрацию. В ближайшее время к Вам поступит письмо (сообщение) с информацией о дате и месте встречи.
+        Благодарим за регистрацию. В ближайшее время к Вам придет письмо (сообщение) с информацией о дате и месте встречи.
         <p> </p>
-        <p>
-            Просим оставить свои впечатления о встрече, пожелания и предложения, по ссылке <a href="~/feed.aspx"> Отзыв   </a>
-
-            Это очень важно для нас
-        </p>
+        <p> Просим оставить свои впечатления о встрече, пожелания и предложения. Это очень важно для нас </p>
         <p align="center"> С любовью во Христе, команда проекта "Чай со смыслом"</p>
     </div>
     <p align="center">
