@@ -175,7 +175,7 @@
            <li class="form-row" style="">
          <label> Тип встречи </label>
             
-               <select name="typvstr"style="width:890px; height:50px; class="ts" id="typvstr">
+               <select name="typvstr"style="width:1030px; height:50px; class="ts" id="typvstr">
     <option value="wtea"> Чай со смыслом  </option>
     <option value="bclub">Книжный клуб </option>
                 </select>
