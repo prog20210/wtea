@@ -136,11 +136,12 @@
         <input type="date"  name="email" value="" <%= ((string)Context.Items["email"]) %>" onchange="email_TextChanged()" />
       </li>         
  <li class="form-row" >   
-     <label>Тип публикации  </label>
+     <label>Тип</label>
 
                <select name="typpub"style="width:1030px; height:50px; class="ts" id="typvstr">
     <option value="wtea"> Чай со смыслом  </option>
     <option value="bclub">Книжный клуб </option>
+    <option value="kvt">Квартирник </option>
                    </select>
      </li>
 
