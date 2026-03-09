@@ -1,0 +1,24 @@
+Type 
+	Description
+text	A single-line text input field (default).
+password A single-line field where characters are masked (e.g., as asterisks or dots).
+submit	A button to submit the form data to the server.
+reset	A button to reset the form fields to their initial values.
+checkbox A checkbox allowing single or multiple values to be selected/deselected from a list.
+radio	A radio button allowing a single choice from a group of options.
+button	A push button with no default behavior, useful for custom JavaScript actions.
+file	A control for selecting files from the user's local device for upload.
+hidden	A field that is not visible to the user but sends its value to the server with the form data.
+image	A graphical submit button using an image specified by the src attribute.
+email	A field for entering an email address. The browser provides basic validation for email format.
+url	A field for entering a URL. The browser provides basic validation for URL format.
+tel	A field for entering a phone number. Mobile browsers display a specialized numeric keyboard for easier entry, but there is no automatic format validation.
+number	A field for entering a number, often including built-in spinner controls in the browser interface.
+range	A slider control for selecting a number within a specified range.
+date	A control for entering a date (year, month, day).
+datetime-local	A control for entering both a date and a time (with no time zone).
+month	A control for entering a month and year.
+week	A control for entering a week and year.
+time	A control for entering a time (no time zone).
+search	A single-line text field intended for search queries, which may be styled differently by browsers.
+color	A control for specifying a color, which opens a color picker in supporting browsers.

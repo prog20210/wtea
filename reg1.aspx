@@ -152,7 +152,7 @@
           <li class="form-row">
 
         <label>Имя</label>
-        <input name="firstName" value="<%= ((string)Context.Items["firstname"]) %>" />
+        <input name="firstName" value="<%= ((string)Context.Items["firstname"]) %>" required/>
     </li>
 
   
