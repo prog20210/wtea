@@ -14,9 +14,8 @@
     @using System.Web.UI.HtmlControls;
     @using System.Data;
     @using System.Web.Mvc.Html;
-   
-    @using Aspose.Html;
     @using ClosedXML
+  @using Aspose.Html; 
     @using System.Collections.Generic;
     @using System.Drawing;
     @using System.Collections.Generic;
@@ -121,210 +120,200 @@
 
 
         Layout = null;
-        int i;
-        int n = 0;
-        string html;
-        int nz = 0;
-        string dat = "";
-        string year;
-        string[] dt;
-        string[] tim;
-        string t1;
-        StringWriter sw = new StringWriter();
-        DateTime dt1;
-        string[] podp = new String[1];
-        string[] namcol2 = new String[1];
-        int t3 = 0;
+    int i;
+    int n = 0;
+    string html;
+    int nz = 0;
+    string dat = "";
+    string year;
+    string[] dt;
+    string[] tim;
+    string t1;
+    StringWriter sw = new StringWriter();
+    DateTime dt1;
+    string[] podp = new String[1];
+    string[] namcol2 = new String[1];
+    int t3 = 0;
 
 
-        dt1 = DateTime.Now;
+    dt1 = DateTime.Now;
 
-        t1 = dt1.ToString();
+    t1 = dt1.ToString();
 
-        tim = t1.Split(' ');
+    tim = t1.Split(' ');
 
-        dat = dt1.ToShortDateString();
+    dat = dt1.ToShortDateString();
 
 
-        for (i = 1; i < 60; i++)
+    for (i = 1; i < 60; i++)
+    {
+        n = i;
+
+    }
+    int t = 0;
+    int j = 3;
+
+    var tab1 = new HtmlTable();
+
+
+
+    ConnectionStringSettings constr;
+    constr = ConfigurationManager.ConnectionStrings["con"];
+
+
+    NpgsqlConnection con = new NpgsqlConnection();
+
+
+    con.ConnectionString = constr.ToString();
+
+    //"Server = 127.0.0.1; Port = 5433; Database = sup; User Id = postgres; Password =12345";
+
+
+
+    con.Open();
+    int num;
+    int numbn;
+    NpgsqlCommand com = con.CreateCommand();
+
+    // select * from req where dat between '01.11.2024' and '30.11.2024' запрос на перспективу, данные ха промежуток
+
+    com.CommandText = "select * from req  where status='В работе'";
+
+    try
+    {
+
+        //
+
+
+
+
+        com.CommandText = "select COUNT(*) from req";
+
+        // получить текущее количество столбцов в таблице из БД
+        int nzap = Convert.ToInt16(com.ExecuteScalar());
+
+
+        com.CommandText = "select * from req";
+
+        NpgsqlDataReader rd = com.ExecuteReader();
+
+
+
+
+
+        // Доработать цикл чтения и заполнения таблицы
+        if (rd.HasRows)
         {
-            n = i;
-
-        }
-        int t = 0;
-        int j = 3;
-
-        var tab1 = new HtmlTable();
 
 
 
-        ConnectionStringSettings constr;
-        constr = ConfigurationManager.ConnectionStrings["con"];
-
-
-        NpgsqlConnection con = new NpgsqlConnection();
-
-
-        con.ConnectionString = constr.ToString();
-
-        //"Server = 127.0.0.1; Port = 5433; Database = sup; User Id = postgres; Password =12345";
-
-
-
-        con.Open();
-        int num;
-        int numbn;
-        NpgsqlCommand com = con.CreateCommand();
-
-        // select * from req where dat between '01.11.2024' and '30.11.2024' запрос на перспективу, данные ха промежуток
-
-        com.CommandText = "select * from req  where status='В работе'";
-
-        try
-        {
-
-            //
-
-
-
-
-            com.CommandText = "select COUNT(*) from req";
-
-            // получить текущее количество столбцов в таблице из БД
-            int nzap = Convert.ToInt16(com.ExecuteScalar());
-
-
-            com.CommandText = "select * from req";
-
-            NpgsqlDataReader rd = com.ExecuteReader();
-
-
-
-
-
-            // Доработать цикл чтения и заполнения таблицы
-            if (rd.HasRows)
+            while (rd.Read())
             {
 
 
 
-                while (rd.Read())
-                {
-
-
-
-                }
             }
+        }
 
-            rd.Close();
+        rd.Close();
 
 
-            // создаем таблицу динамически. Дописать процедуру создания. Разобраться почему зависало
+        // создаем таблицу динамически. Дописать процедуру создания. Разобраться почему зависало
 
-            using (HTMLDocument doc = new HTMLDocument())
+        using (HTMLDocument doc = new HTMLDocument())
+        {
+            var body = doc.Body;
+
+            var cols = 6;
+            var rows = nz;
+
+            /// заголовок таблицы. Получить
+
+
+            ////
+
+            var tab2 = doc.GetElementsByTagName("html").First();
+            var otb = doc.GetElementsByTagName("select");
+            var tbody = doc.CreateElement("tbody");
+            tab2.AppendChild(tbody);
+
+
+            var tr = doc.CreateElement("tr");
+            tbody.AppendChild(tr);
+
+            // продолжить писать шапку таблицы. Вставка ячеек
+
+            var isFirstRowHeader = true;
+
+
+            if (isFirstRowHeader)
             {
-                var body = doc.Body;
 
-                var cols = 6;
-                var rows = nz;
+                // неправильно обрабатывается запрос посмотреть
 
-                /// заголовок таблицы. Получить
+                NpgsqlCommand com1 = con.CreateCommand();
 
 
-                ////
 
-                var tab2 = doc.GetElementsByTagName("html").First();
-                var otb = doc.GetElementsByTagName("select");
-                var tbody = doc.CreateElement("tbody");
-                tab2.AppendChild(tbody);
+                NpgsqlConnection con1 = new NpgsqlConnection();
 
 
-                var tr = doc.CreateElement("tr");
-                tbody.AppendChild(tr);
+                con1.ConnectionString = constr.ToString();
 
-                // продолжить писать шапку таблицы. Вставка ячеек
+                con1.Open();
 
-                var isFirstRowHeader = true;
+                com1.CommandText = "select count(zagl) from otcols";
 
 
-                if (isFirstRowHeader)
+                string namcol;
+
+                int nzap2 = Convert.ToInt32(com1.ExecuteScalar());
+
+                NpgsqlCommand com2 = con.CreateCommand();
+
+                com2.CommandText = "select zagl from otcols order by id asc";
+
+
+                NpgsqlDataReader rd2 = com2.ExecuteReader();
+
+                if (rd2.HasRows)
                 {
 
-                    // неправильно обрабатывается запрос посмотреть
-
-                    NpgsqlCommand com1 = con.CreateCommand();
 
 
 
-                    NpgsqlConnection con1 = new NpgsqlConnection();
+                    int length = nzap2;
+
+                    Array.Resize<string>(ref namcol2, length);
 
 
-                    con1.ConnectionString = constr.ToString();
-
-                    con1.Open();
-
-                    com1.CommandText = "select count(zagl) from otcols";
+                    string tt1 = "";
+                    int k = 0;
+                    for (t3 = 0; t3 <= nzap2 - 1; t3++)
 
 
-                    string namcol;
-
-                    int nzap2 = Convert.ToInt32(com1.ExecuteScalar());
-
-                    NpgsqlCommand com2 = con.CreateCommand();
-
-                    com2.CommandText = "select zagl from otcols order by id asc";
-
-
-                    NpgsqlDataReader rd2 = com2.ExecuteReader();
-
-                    if (rd2.HasRows)
                     {
+                        // tt =rd2[0].
+
+                        tr = doc.CreateElement("tr");
+                        tbody.AppendChild(tr);
+
+                        var th = doc.CreateElement("th");
+
+                        namcol2[k] = rd2[i].ToString();
 
 
+                        //   title = doc.CreateTextNode(namcol2[t3]);
+                        // th.AppendChild(title);
+                        tr.AppendChild(th);
 
 
-                        int length = nzap2;
-
-                        Array.Resize<string>(ref namcol2, length);
-
-
-                        string tt1 = "";
-                        int k = 0;
-                        for (t3 = 0; t3 <= nzap2 - 1; t3++)
-
-
-                        {
-                            // tt =rd2[0].
-
-                            tr = doc.CreateElement("tr");
-                            tbody.AppendChild(tr);
-
-                            var th = doc.CreateElement("th");
-
-                            namcol2[k] = rd2[i].ToString();
-
-
-                            //   title = doc.CreateTextNode(namcol2[t3]);
-                            // th.AppendChild(title);
-                            tr.AppendChild(th);
-
-
-                            rd2.NextResult();
-
-                        }
-
-
-                        rd2.Close();
-
-
-
-
+                        rd2.NextResult();
 
                     }
 
 
-
-
+                    rd2.Close();
 
 
 
@@ -334,64 +323,74 @@
 
 
 
+
+
+
+
+
+
             }
 
 
 
-
-
-
-            /// инициализация читалки и чтение из базы заголовков таблицы
-
-
-
-
-            // Получить элемент таблицы. Если переменная пустая - NULL, создать таблицу
-
-
-
-
-
-            //////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // Создание столбцов заголовков таблицы
-            //             for (int k = 1; j < cols + 1; k++)
-            //         {
-
-
-            // Создание заголовков  в таблице
-
-
-
-            //         }
-
-
-
-
-
-
         }
 
-        catch
-        {
 
-        }
+
+
+
+
+        /// инициализация читалки и чтение из базы заголовков таблицы
+
+
+
+
+        // Получить элемент таблицы. Если переменная пустая - NULL, создать таблицу
+
+
+
+
+
+        //////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Создание столбцов заголовков таблицы
+        //             for (int k = 1; j < cols + 1; k++)
+        //         {
+
+
+        // Создание заголовков  в таблице
+
+
+
+        //         }
+
+
+
+
+
+
+    }
+
+    catch
+    {
+
+    }
 
 
 

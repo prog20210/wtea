@@ -8,7 +8,7 @@
     <strong>Telegram: </strong>  <a href="https://t.me/wisetea"> ТГ Канал </a>
     </addres>
     <address>
-        <strong>ВК</strong>  <a href="https://vk.com/wisetea56"> Ссылка на группу ВК</a>
+        <strong>ВК</strong>  <a href="https://vk.com/wisetea56"> Группа в ВК</a>
       
     </address>
      <address>

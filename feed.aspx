@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="~/fb.cshtml"  Inherits="WebApplication1.WebForm1" %>
+﻿E:\wtnew\ViewPage1.cshtml<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="~/fb.cshtml"  Inherits="WebApplication1.WebForm1" %>
  <style>
 .wrapper {
   background-color: whitesmoke;
