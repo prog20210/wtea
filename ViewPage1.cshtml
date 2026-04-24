@@ -604,9 +604,12 @@
                                 con3.Open();
 
                                 NpgsqlDataReader rd4;
-                                com3.CommandText = "select Count(*) from req";
+                                com3.CommandText = "select Count(*) from reg";
+                                object jjj;
 
-                                int nz1 = Convert.ToInt32(com3.ExecuteScalar());
+                                jjj = com3.ExecuteScalar();
+
+                                //int nz1 = Convert.ToInt32();
 
                                 //Вставлять фильтр в  запрос. Вариант отбора выбрать combobox
 

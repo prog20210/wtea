@@ -9,10 +9,9 @@
        
     </div>
 
-    <input type="button" onclick=" "  />Мероприятия
 
-  <a href=" ">  Мероприятия     </a>  
-  <a href="">  Планирование    </a>  
+  <a href="ev.aspx">  Мероприятия     </a>  
+  <a href="pub.aspx">  План публикаций </a>  
   <a href="">   Добавить пользователя    </a>  
 
 

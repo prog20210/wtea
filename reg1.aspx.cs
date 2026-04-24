@@ -11,19 +11,10 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            obr1();
+           
         }
 
-        void obr1()
-        {
-
-        }
-        void changeview()
-        {
-            //beg = Request.Form["beg"].Trim().ToString();
-            //end = Request.Form["end"].Trim().ToString();
-        }
-
+       
     }
    
 }

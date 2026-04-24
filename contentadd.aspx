@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="req.cshtml" Inherits="WebApplication1.reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contentadd.aspx.cs" Inherits="WebApplication1.reg" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
 
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title align="center"> Запись на мероприятия проекта "Чай со смыслом" </title>
+
 </head>
           <li>
            <meta charset="utf-8" />
@@ -139,7 +139,7 @@
               
 
 <body>
-<h2> Регистрация на мероприятия проекта "Чай со смыслом"  </h2>
+<h2> Добавить материал в план </h2>
 <form action="/req.cshtml" method="post" name="req" enctype="multipart/form-data">
   <ul class="wrapper">
 
@@ -151,37 +151,31 @@
 
           <li class="form-row">
 
-        <label>Имя</label>
-        <input name="firstName" value="<%= ((string)Context.Items["firstname"]) %>" required/>
-    </li>
 
   
 
       <li class="form-row">
 
-        <label>Телефонный номер  </label>
-        <input name="tnumb" value="<%= ((string)Context.Items["tnumb"]) %>" />
+        <label>Тема  </label>
+        <input name="theme" value=" " />
 
     </li>
 
-        <li class="form-row">
-
-        <label> ссылка на ВК (ТГ). </label>
-        <input name="link" value="<%= ((string)Context.Items["tnumb"]) %>" />
-
-
-    </li>
 
            <li class="form-row" style="">
-         <label> Тип встречи </label>
+         <label> Тип материала </label>
             
                <select name="typvstr"style="width:1030px; height:50px; class="ts" id="typvstr">
-    <option value="wtea"> Чай со смыслом  </option>
-    <option value="bclub">Книжный клуб </option>
-    <option value="trip">Поездки  </option>
+    <option value="postpub"> Пост   </option>
+    <option value="bclub"> Анонс книжного клуба </option>
+    <option value="evnt"> Анонс встречи </option>
+    <option value="evnt"> Информация о поездках </option>
                 </select>
-  
-
+    </li>
+<li class="form-row" style="">
+        <label> ФИО ответственного  </label>
+        <input name="firstName" value="<%= ((string)Context.Items["firstname"]) %>" required/>
+    </li>
 
 
 
@@ -194,16 +188,21 @@
 
 
 
-        <label> Дата встречи  </label>
+        <label> Выполнить до   </label>
         <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>   
       <li class="form-row">
-       <label> Откуда узнали о нас и наших встречах ?   </label>
-   <input name="source" value=""/>
-
-  
 
 
+                <li class="form-row">
+        <label> Замечания, пожелания, предложения по публикации </label>
+        <input name="feedback" value=""/>
+ </li>
 
+
+   
+
+ 
+ </p>
 
       
     

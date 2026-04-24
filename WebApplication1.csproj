@@ -409,6 +409,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="pub.aspx" />
+    <Content Include="ev.aspx" />
+    <Content Include="eventadd.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -418,10 +421,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="contentplanadd.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="feed.aspx" />
+    <Content Include="contentadd.aspx" />
     <Content Include="reg1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -681,6 +683,27 @@
     <Content Include="Views\web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pub.aspx.cs">
+      <DependentUpon>pub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pub.aspx.designer.cs">
+      <DependentUpon>pub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ev.aspx.cs">
+      <DependentUpon>ev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ev.aspx.designer.cs">
+      <DependentUpon>ev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eventadd.aspx.cs">
+      <DependentUpon>eventadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eventadd.aspx.designer.cs">
+      <DependentUpon>eventadd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -712,17 +735,17 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="contentplanadd.aspx.cs">
-      <DependentUpon>contentplanadd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="contentplanadd.aspx.designer.cs">
-      <DependentUpon>contentplanadd.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="contentadd.aspx.cs">
+      <DependentUpon>contentadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contentadd.aspx.designer.cs">
+      <DependentUpon>contentadd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="reg1.aspx.cs">
       <DependentUpon>reg1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -751,13 +774,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="feed.aspx.cs">
-      <DependentUpon>feed.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="feed.aspx.designer.cs">
-      <DependentUpon>feed.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -771,7 +787,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="ViewPage1.cshtml" />
     <Content Include="Guests.cshtml" />
-    <Content Include="ViewPage1 - Копировать.cshtml" />
+    <Content Include="Contentplan.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
