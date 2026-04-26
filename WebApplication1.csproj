@@ -424,7 +424,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="contentadd.aspx" />
-    <Content Include="pubadd.aspx" />
     <Content Include="reg1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -746,13 +745,6 @@
     </Compile>
     <Compile Include="contentadd.aspx.designer.cs">
       <DependentUpon>contentadd.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pubadd.aspx.cs">
-      <DependentUpon>pubadd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pubadd.aspx.designer.cs">
-      <DependentUpon>pubadd.aspx</DependentUpon>
     </Compile>
     <Compile Include="reg1.aspx.cs">
       <DependentUpon>reg1.aspx</DependentUpon>
