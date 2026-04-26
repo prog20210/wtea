@@ -12,8 +12,9 @@
   
 
   <a href="ev.aspx">  Добавить встречу </a>  
-  <a href="pub.aspx"> Добавиить публикации  </a>   
-  <a href="pub.aspx"> Общий план   </a>   
+  <a href="pub.aspx"> Добавиить публикации  </a>  
+    
+  <a href="Contentplan.cshtml"> Общий план   </a>   
 
    
    
