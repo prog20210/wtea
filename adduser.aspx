@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="req.cshtml" Inherits="WebApplication1.reg"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adduser.aspx.cs" Inherits="WebApplication1.reg" %>
 
 <!DOCTYPE html>
 
@@ -139,7 +139,7 @@
               
 
 <body>
-<h2> Регистрация на мероприятия проекта "Чай со смыслом"  </h2>
+<h2> Добавить пользователя </h2>
 <form action="/req.cshtml" method="post" name="req" enctype="multipart/form-data">
   <ul class="wrapper">
 
@@ -152,69 +152,28 @@
           <li class="form-row">
 
         <label>Имя</label>
-        <input name="firstName" value="<%= ((string)Context.Items["firstname"]) %>" required/>
+        <input name="firstName" value="" required/>
     </li>
 
   
 
       <li class="form-row">
 
-        <label>Телефонный номер  </label>
-        <input name="tnumb" value="<%= ((string)Context.Items["tnumb"]) %>" />
+        <label>Фамилия</label>
+        <input name="tnumb" value="" />
 
     </li>
 
         <li class="form-row">
 
-        <label> ссылка на ВК (ТГ). </label>
-        <input name="link" value="<%= ((string)Context.Items["tnumb"]) %>" />
+        <label> Роль </label>
+        <input name="link" value="" />
 
 
     </li>
 
-           <li class="form-row" style="">
-         <label> Тип встречи </label>
-            
-               <select name="typvstr"style="width:1030px; height:50px; class="ts" id="typvstr">
-    <option value="wtea"> Чай со смыслом  </option>
-    <option value="bclub">Книжный клуб </option>
-    <option value="trip">Поездки  </option>
-                </select>
-  
+   
 
-
-
-
-
-
-  
- </p>
-    
-   <li class="form-row">
-
-
-
-        <label> Дата встречи  </label>
-        <input type="date" name="beg"  style="width:10px" height:50px;  required > </li>   
-      <li class="form-row">
-       <label> Откуда узнали о нас и наших встречах ?   </label>
-   <input name="source" value=""/>
-
-  
-
-
-
-
-      
-    
-     
-
-    </li>
-    
-  <li class="form-row">
-
-      
-    </li>
       
 
           
