@@ -24,7 +24,7 @@
 
 
      <address>
-     <strong> Телефон </strong>  123566664   
+     <strong> Телефон </strong>  <a href="tel:+78121111111">(812) 123-45-67</a>
 </address>
    
 </asp:Content>

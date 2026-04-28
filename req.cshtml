@@ -1,6 +1,26 @@
-﻿@using Npgsql;
+﻿﻿@using Npgsql;
+
+@using System.Globalization;
+@using System.Configuration;
+@using System.Diagnostics;
 @using System.Management.Automation;
-@using System.Configuration
+@using System.Web;
+@using System.Threading;
+@using System.ComponentModel;
+@using System.Text;
+@using System.Net;
+@using MailKit.Net.Smtp;
+@using MailKit;
+
+@using System.Web;
+@using System.Net;
+@using System.IO;
+@using System.Collections;
+@using System.Collections.Generic;
+@using System.Collections.Specialized;
+@using System.Reflection;
+@using System.Runtime.CompilerServices;
+@using System.Web;
 
 @{
     string email = "";
@@ -32,8 +52,8 @@
         //string city = Request.Form["city"].Trim();
 
         linkvktg = Request.Form["link"].Trim();
-      
-      
+
+
 
         NpgsqlConnection con = new NpgsqlConnection();
         ConnectionStringSettings constr;
@@ -41,9 +61,7 @@
         con.ConnectionString = constr.ToString();
         try
         {
-            con.Open();
-            NpgsqlCommand com = new NpgsqlCommand();
-            com.CommandText = "";
+       
         }
         catch
         {
@@ -67,7 +85,7 @@
         Благодарим за регистрацию. В ближайшее время в указанный Вами мессенджер поступит сообщение с информацией о дате и месте встречи.
         <p> </p>
         <p>
-            Просим оставить свои впечатления о встрече, пожелания и предложения, по ссылке <a href="~/feed.aspx"> Отзыв   </a>
+            Просим оставить свои впечатления о встрече, пожелания и предложения, по ссылке <a href="~/feedback.aspx"> Отзыв   </a>
 
             Это очень важно для нас
         </p>

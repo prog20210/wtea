@@ -14,9 +14,9 @@
     string end;
     string tnumb;
     string fb;
-    DateTime datbeg;
-    DateTime datend;
+    string datev;
 
+    string otz;
     //
 
 
@@ -25,15 +25,13 @@
     if (IsPost)
     {
         Layout = null;
-        email = Request.Form["lastName"].Trim();
-        tnumb = Request.Form["lastName"].Trim();
-        typvstr = Request.Form["typvstr"].Trim();
-        //string city = Request.Form["city"].Trim();
-        lastname = Request.Form["lastName"].Trim();
+        email = Request.Form["datev"].Trim();
+  
+    
         firstname = Request.Form["firstName"].Trim();
-        linkvktg = Request.Form["link"].Trim();
-        typvstr = Request.Form["theme"].Trim();
-        fb = Request.Form["feedback"].Trim();
+        otz = Request.Form["fdb"].Trim();
+        datev = Request.Form["datev"].Trim().;
+     
 
         NpgsqlConnection con = new NpgsqlConnection();
         ConnectionStringSettings constr;
