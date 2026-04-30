@@ -34,6 +34,8 @@
     string end;
     string tnumb;
     string fb;
+    string tvstr;
+    string source;
     DateTime datbeg;
     DateTime datend;
 
@@ -47,11 +49,17 @@
         Layout = null;
 
 
+
         firstname = Request.Form["firstName"].Trim();
         tnumb = Request.Form["tnumb"].Trim();
         //string city = Request.Form["city"].Trim();
-
+        tvstr=Request.Form["typvstr"].Trim();
         linkvktg = Request.Form["link"].Trim();
+        string dat1 = Request.Form["beg"].ToString();
+
+        datbeg = Convert.ToDateTime(dat1);
+
+        source = Request.Form["source"].Trim();
 
 
 
@@ -61,7 +69,7 @@
         con.ConnectionString = constr.ToString();
         try
         {
-       
+            con.Open();
         }
         catch
         {

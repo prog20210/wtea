@@ -129,7 +129,7 @@
      align-items:normal
       
  }
-
+ 
  
 </style>
 
@@ -145,7 +145,7 @@
 
        <li class="form-row">
         <label> Дата встречи  </label>
-        <input type="date" name="datev"  style="width:50px" height:500px"  required > </li>   
+        <input type="date" name="datev"  style="width:500px" height:500px"  required > </li>   
 
       <li class="form-row">
   
@@ -159,7 +159,7 @@
       <li class="form-row">
 
         <label>Отзыв </label> 
-  <input name="fdb" value="" style="width:5000px" height:500px"/> </li>
+  <input name="fdb" value="" style="width:5000px" height:10000px"/> </li>
 
 
 
